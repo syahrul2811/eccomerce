@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <link rel="stylesheet" href="invoice.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Invoice Pemesanan</h1>
+    </header>
+    <section class="invoice">
+      <h2>Detail Pesanan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama Kopi</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="invoice-body"></tbody>
+      </table>
+      <div class="total">
+        <h3>Total Bayar: <span id="invoice-total">Rp 0</span></h3>
+      </div>
+    </section>
+    <script src="invoice.js"></script>
+  </body>
+</html>

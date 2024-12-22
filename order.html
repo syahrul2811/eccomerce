@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan Kopi</title>
+    <link rel="stylesheet" href="order.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="back-button" onclick="goBack()">
+        <span class="arrow">&#8592;</span>
+        <span class="text">Kembali</span>
+      </div>
+      <h1>Menu Kopi</h1>
+      <p>Pilih kopi favorit Anda dan masukkan ke keranjang!</p>
+    </header>
+
+    <section class="menu">
+      <!-- Kopi Menu List -->
+      <section class="menu">
+        <div class="menu-item" data-location="sumatra" data-price="15000" data-type="arabica">
+          <img src="foto/kopi1.jpg" alt="arabica" />
+          <h2>Espresso</h2>
+          <p>Rp 15.000</p>
+          <button class="add-to-cart" data-name="Espresso" data-price="15000">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item" data-location="java" data-price="18000" data-type="robusta">
+          <img src="foto/kopi1.jpg" alt="green coffee" />
+          <h2>Americano</h2>
+          <p>Rp 18.000</p>
+          <button class="add-to-cart" data-name="Americano" data-price="18000">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item" data-location="bali" data-price="20000" data-type="single-origin">
+          <img src="foto/kopi1.jpg" alt="Americano" />
+          <h2>Cappuccino</h2>
+          <p>Rp 20.000</p>
+          <button class="add-to-cart" data-name="Cappuccino" data-price="20000">Tambah ke Keranjang</button>
+        </div>
+      </section>
+      
+
+      <section class="filter-section">
+        <div class="container">
+          <h2>Filter Pencarian</h2>
+          <form id="filter-form" class="filter-form">
+            <div class="filter-group">
+              <label for="location">Lokasi:</label>
+              <select id="location" name="location">
+                <option value="all">Semua Lokasi</option>
+                <option value="sumatra">Sumatra</option>
+                <option value="java">Jawa</option>
+                <option value="bali">Bali</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="price">Harga:</label>
+              <select id="price" name="price">
+                <option value="all">Semua Harga</option>
+                <option value="low">Di bawah Rp50.000</option>
+                <option value="mid">Rp50.000 - Rp100.000</option>
+                <option value="high">Di atas Rp100.000</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="type">Jenis Kopi:</label>
+              <select id="type" name="type">
+                <option value="all">Semua Jenis</option>
+                <option value="arabica">Arabika</option>
+                <option value="robusta">Robusta</option>
+                <option value="single-origin">Single Origin</option>
+              </select>
+            </div>
+            <button type="button" id="apply-filter" class="btn-filter">Terapkan Filter</button>
+          </form>
+        </div>
+      </section>
+      
+      
+      <section class="cart">
+        <h2>Keranjang Pemesanan</h2>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Nama Kopi</th>
+              <th>Harga</th>
+              <th>Jumlah</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <tr>
+              <td colspan="4" class="empty-cart">Keranjang masih kosong.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="cart-footer">
+          <h3>Total Bayar: <span id="total-price">Rp 0</span></h3>
+          <button id="place-order" class="btn-order" disabled>Pesan Sekarang</button>
+        </div>
+      </section>
+      
+
+    <script src="order.js"></script>
+  </body>
+  <script>
+    // Fungsi untuk tombol Kembali
+    function goBack() {
+      window.history.back();
+    }
+    feather.replace();
+  </script>
+  <script>
+    feather.replace();
+  </script>
+</html>
